@@ -1,6 +1,6 @@
 import random
 
-done = [7.8, 9.1, 16.11, 15.4, 5.15]
+done = [7.8, 9.1, 16.11, 15.4, 5.15, 13.1, 12.4]
 
 size = {
     4: 11,
@@ -25,7 +25,7 @@ def gen():
     all_questions = []
     for cap in range(4, 19):
         for qn in range(1, size[cap] + 1):
-            question = f"{cap}.{qn}"
+            question = float(f"{cap}.{qn}")
             if question not in done:
                 all_questions.append(question)
     print(random.choice(all_questions))
